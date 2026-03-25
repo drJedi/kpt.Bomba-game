@@ -6,10 +6,15 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
+    // Make generated asset URLs work under GitHub Pages subpaths (e.g. /REPO/...)
+    base: './',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
     },
+    // Treat existing root `img/` folder as Vite "public" assets.
+    // Vite copies it to `dist/` so GitHub Pages can serve them.
+    publicDir: 'img',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

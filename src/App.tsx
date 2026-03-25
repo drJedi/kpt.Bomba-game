@@ -94,7 +94,7 @@ export default function App() {
                 aria-label="Uruchom grę"
               >
                 <img
-                  src="./img/start-here.svg"
+                  src={`${import.meta.env.BASE_URL}start-here.svg`}
                   alt="Start"
                   className="w-72 h-72 object-contain drop-shadow-[0_0_30px_rgba(249,115,22,0.25)]"
                 />
@@ -136,7 +136,7 @@ export default function App() {
                 </div>
                 <div className="w-28 h-28 rounded-lg border-4 border-zinc-700 overflow-hidden shrink-0 shadow-2xl rotate-2">
                   <img 
-                    src="./img/janusz.png" 
+                    src={`${import.meta.env.BASE_URL}janusz.png`}
                     alt="Admirał" 
                     className="w-full h-full object-cover grayscale contrast-125"
                     referrerPolicy="no-referrer"
@@ -269,7 +269,7 @@ export default function App() {
                   </div>
                   <div className="w-32 h-32 rounded-xl border-4 border-red-900 overflow-hidden shrink-0 shadow-2xl -rotate-3">
                     <img 
-                      src="./img/admiralJachas.png" 
+                      src={`${import.meta.env.BASE_URL}admiralJachas.png`}
                       alt="Batoniki" 
                       className="w-full h-full object-cover grayscale contrast-150 brightness-75"
                       referrerPolicy="no-referrer"
@@ -331,7 +331,11 @@ export default function App() {
                         className="absolute inset-0 bg-black border-4 border-purple-500/50 hover:border-purple-500 transition-all flex items-center justify-center group rounded-2xl shadow-2xl overflow-hidden"
                       >
                         <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent" />
-                        <img src="./img/sultan_kosmitow.png" alt="Candy Bar" className="w-16 h-16 object-cover" />
+                        <img
+                          src={`${import.meta.env.BASE_URL}sultan_kosmitow.png`}
+                          alt="Candy Bar"
+                          className="w-16 h-16 object-cover"
+                        />
                         <div className="w-16 h-16 bg-purple-500/20 group-hover:bg-purple-500/40 rounded-lg shadow-[0_0_30px_rgba(168,85,247,0.4)] transition-all group-hover:scale-110" />
                       </button>
                     ) : (
@@ -432,7 +436,11 @@ export default function App() {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
                     <p className="text-6xl font-mono font-black text-green-400 tracking-tighter mb-4 flex items-center justify-center gap-4">
                       <span>SKARB ODBLOKOWANY</span>
-                      <img src="./img/orzel1.png" alt="Skarb" className="w-16 h-16 object-cover inline-block align-middle" />
+                      <img
+                        src={`${import.meta.env.BASE_URL}orzel1.png`}
+                        alt="Skarb"
+                        className="w-16 h-16 object-cover inline-block align-middle"
+                      />
                     </p>
                     <p className="text-zinc-500 uppercase tracking-[0.5em] font-black text-xl">Admirał jest z Ciebie dumny!</p>
                   </div>
